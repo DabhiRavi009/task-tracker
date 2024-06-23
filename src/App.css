@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NL:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 52%;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background: rgb(157, 194, 224);
+  background: linear-gradient(
+    90deg,
+    hsla(208, 33%, 21%, 1) 0%,
+    hsla(211, 36%, 46%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(208, 33%, 21%, 1) 0%,
+    hsla(211, 36%, 46%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(208, 33%, 21%, 1) 0%,
+    hsla(211, 36%, 46%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#243748", endColorstr="#4B749F", GradientType=1);
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskform-container {
+  margin: 50px 0px;
+  padding: 20px;
+  width: 500px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.taskform-container img {
+  width: 50px;
+  height: 50px;
+}
+
+.taskform-container h1 {
+  font-size: 2.5rem;
+  margin: 10px 0px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+}
+
+.taskform-container .input-container {
+  position: relative;
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+.taskform-container .input-container .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.taskform-container .input-container .edit-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: green;
+}
+
+.taskform-container .input-container .add-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.taskform-container .input-container .add-icon:hover {
+  color: green;
+}
+
+.taskform-container .input-container .input-field {
+  width: 100%;
+  padding: 10px 40px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.taskform-container .input-container .input-field:focus,
+.taskform-container .input-container .input-field:hover {
+  outline: none;
+  border: 2px solid #ad88c6;
+}
+
+.taskform-container .task-container {
+  margin: 10px 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.taskform-container .task-container .task {
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ad88c6;
+  transition: all 0.3s linear;
+}
+
+.taskform-container .task-container .task .para-container {
+  height: auto;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.taskform-container .task-container .task .para-container p {
+  padding: 10px;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.taskform-container .task-container .task .icon-container {
+  height: auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.taskform-container .task-container .task .icon-container .delete-icon {
+  font-weight: 500;
+  padding: 10px 5px;
+  color: white;
+  font-size: 2rem;
+}
+
+.taskform-container .task-container .task .icon-container .edit-icon {
+  font-weight: 500;
+  padding: 10px 5px;
+  color: white;
+  font-size: 2.2rem;
+}
+
+.taskform-container .task-container .task:hover {
+  background-color: white;
+  transform: translateY(-3px);
+
+  & p {
+    color: darkslategray;
+  }
+  & .delete-icon {
+    color: red;
+  }
+  & .edit-icon {
+    color: green;
+  }
+}
+
+.taskform-container .button-container {
+  width: 100%;
+  height: auto;
+}
+
+.taskform-container .button-container .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #7469b6;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.3s linear;
+}
+
+.taskform-container .button-container .btn:hover {
+  background-color: #ccc;
+  transform: translateY(-2px);
+  color: darkslategray;
+}
+
+/* Mobile View */
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .taskform-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .taskform-container h1 {
+    font-size: 2rem;
+  }
+
+  .taskform-container .input-container .input-field {
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+  }
+
+  .taskform-container .task-container .task p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  html {
+    font-size: 50%;
+  }
+
+  .taskform-container {
+    width: 500px;
+    padding: 15px;
+  }
+
+  .taskform-container img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .taskform-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .taskform-container .input-container .input-field {
+    padding: 10px 35px 10px 35px;
+  }
+
+  .taskform-container .task-container .task p {
+    font-size: 1.9rem;
+  }
+
+  .taskform-container .task-container .task i {
+    font-size: 2.1rem;
+  }
+
+  .taskform-container .button-container .btn {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 55%;
+  }
+
+  .taskform-container {
+    width: 500px;
+    padding: 20px;
+  }
+
+  .taskform-container img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .taskform-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .taskform-container .input-container .input-field {
+    padding: 10px 40px 10px 40px;
+  }
+
+  .taskform-container .task-container .task p {
+    font-size: 2rem;
+  }
+
+  .taskform-container .task-container .task i {
+    font-size: 2.2rem;
+  }
+
+  .taskform-container .button-container .btn {
+    font-size: 2rem;
+  }
+}
